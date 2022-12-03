@@ -1,4 +1,5 @@
-def single_run(image_name):
+def single_run(file_path):
+  image_name = file_path.split('/')[-1]
   run = 0
   for character in image_name:
     if character in ['1','2','3','4','5','6','7','8','9']:
