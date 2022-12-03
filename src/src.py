@@ -33,8 +33,7 @@ def single_run(file_path):
   view_minus_recall = conditions['view'] - conditions['recall']
   plot_contrast_matrix(view_minus_recall, design_matrix=design_matrix)
 
-  image_file = image_name
-  fmri_imgs = image.load_img(image_file)
+  fmri_imgs = image.load_img(file_path)
   avg_img = mean_img(fmri_imgs)
   fmri_glm = FirstLevelModel(t_r=1,
                             noise_model='ar1',
