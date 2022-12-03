@@ -13,6 +13,6 @@ from nilearn.glm import threshold_stats_img
 from numpy import array
 
 from src import *
-single_run("/Users/bradpowell/Desktop/sub-01/ses-01/Functional/run_1.nii.gz")
-single_run("/Users/bradpowell/Desktop/sub-01/ses-01/Functional/run_2.nii.gz")
-single_run("/Users/bradpowell/Desktop/sub-01/ses-01/Functional/run_3.nii.gz")
+single_run("/Users/bradpowell/Desktop/sub-01/Functional/run_1.nii.gz")
+single_run("/Users/bradpowell/Desktop/sub-01/Functional/run_2.nii.gz")
+single_run("/Users/bradpowell/Desktop/sub-01/Functional/run_3.nii.gz")
