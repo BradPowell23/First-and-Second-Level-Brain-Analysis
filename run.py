@@ -23,7 +23,7 @@ def main(targets):
     Runs target test on the test data
     '''
     if 'test' in targets:
-        single_run('test/testdata/test_1.nii.gz')
+        single_run('test/testdata/test_data.nii.gz', 'test/testdata/events_view.tsv', 'test/testdata/events_recall.tsv', 'test/testdata/confounds.txt')       
     return
 
 if __name__ == '__main__':
