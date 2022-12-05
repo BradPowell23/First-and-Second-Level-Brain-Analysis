@@ -1,19 +1,9 @@
-def single_run(file_path):
-  image_name = file_path.split('/')[-1]
-  run = 0
-  for character in image_name:
-    if character in ['1','2','3','4','5','6','7','8','9']:
-        run = int(character)
-        
-  view_file = 'view_' + str(run) + '.tsv'
+def single_run(image_file, view_file, recall_file, confounds_file):
   events_view = pd.read_csv(view_file, sep='\t')
   events_view['trial_type'] = 'view'
-  recall_file = 'recall_' + str(run) + '.tsv'
   events_recall = pd.read_csv(recall_file, sep='\t')
   events_recall['trial_type'] = 'recall'
   events = pd.concat([events_view, events_recall])
-
-  confounds_file = 'confounds_' + str(run) + '.txt'
   confounds = pd.read_csv(confounds_file, sep='\t')
 
   timings = np.arange(0, len(confounds))
@@ -33,7 +23,7 @@ def single_run(file_path):
   view_minus_recall = conditions['view'] - conditions['recall']
   plot_contrast_matrix(view_minus_recall, design_matrix=design_matrix)
 
-  fmri_imgs = image.load_img(file_path)
+  fmri_imgs = image.load_img(image_file)
   avg_img = mean_img(fmri_imgs)
   fmri_glm = FirstLevelModel(t_r=1,
                             noise_model='ar1',
