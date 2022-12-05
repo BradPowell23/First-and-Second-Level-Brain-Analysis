@@ -25,17 +25,19 @@ def single_run(image_file, view_file, recall_file, confounds_file):
 
   fmri_imgs = image.load_img(image_file)
   avg_img = mean_img(fmri_imgs)
+  
+  #Model
   fmri_glm = FirstLevelModel(t_r=1,
                             noise_model='ar1',
                             standardize=False,
                             hrf_model='spm',
                             drift_model=None,
                             high_pass=.01)
-
   fmri_glm = fmri_glm.fit(fmri_imgs, design_matrices = design_matrix)
   z_map = fmri_glm.compute_contrast(view_minus_recall,
                                     output_type='z_score')
 
+  #Activation Maps
   plot_stat_map(z_map, bg_img=avg_img, threshold=3.0,
                 display_mode='z', cut_coords=3, black_bg=True,
                 title='View minus Recall (Z>3)')
