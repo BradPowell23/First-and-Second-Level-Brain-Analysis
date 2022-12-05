@@ -25,6 +25,7 @@ def main(targets):
     '''
     if 'test' in targets:
         single_run('test/testdata/test_data.nii.gz', 'test/testdata/events_view.tsv', 'test/testdata/events_recall.tsv', 'test/testdata/confounds.txt')       
+        print("Works")
     return
 
 if __name__ == '__main__':
