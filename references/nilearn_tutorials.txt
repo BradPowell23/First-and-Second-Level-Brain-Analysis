@@ -1,0 +1,7 @@
+List of Nilearn tutorials used in our project.
+First level models: https://nilearn.github.io/stable/glm/first_level_model.html
+Second level models: https://nilearn.github.io/stable/glm/second_level_model.html
+Examples of design matrices: https://nilearn.github.io/stable/auto_examples/04_glm_first_level/plot_design_matrix.html#sphx-glr-auto-examples-04-glm-first-level-plot-design-matrix-py
+Example of explicit fixed effects fMRI model fitting: https://nilearn.github.io/stable/auto_examples/04_glm_first_level/plot_fixed_effects.html#sphx-glr-auto-examples-04-glm-first-level-plot-fixed-effects-py
+Second-level fMRI model: one sample test: https://nilearn.github.io/stable/auto_examples/05_glm_second_level/plot_second_level_one_sample_test.html#sphx-glr-auto-examples-05-glm-second-level-plot-second-level-one-sample-test-py
+Statistical testing of a second-level analysis: https://nilearn.github.io/stable/auto_examples/05_glm_second_level/plot_thresholding.html#sphx-glr-auto-examples-05-glm-second-level-plot-thresholding-py
