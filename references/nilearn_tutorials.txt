@@ -1,4 +1,5 @@
 List of Nilearn tutorials used in our project.
+Intro to GLM Analysis: a single-session, single-subject fMRI dataset: https://nilearn.github.io/stable/auto_examples/00_tutorials/plot_single_subject_single_run.html
 First level models: https://nilearn.github.io/stable/glm/first_level_model.html
 Second level models: https://nilearn.github.io/stable/glm/second_level_model.html
 Examples of design matrices: https://nilearn.github.io/stable/auto_examples/04_glm_first_level/plot_design_matrix.html#sphx-glr-auto-examples-04-glm-first-level-plot-design-matrix-py
